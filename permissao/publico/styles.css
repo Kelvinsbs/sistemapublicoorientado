@@ -1,0 +1,540 @@
+body{
+	margin:0;
+	border:0;
+}
+
+#menu,
+#menu ul,
+#menu ul li,
+#menu ul li a,
+#menu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#menu:after,
+#menu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#menu #menu-button {
+  display: none;
+}
+#menu {
+  font-family: Montserrat, sans-serif;
+  background: #FF4500;
+}
+#menu > ul > li {
+  float: left;
+}
+#menu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#menu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#menu.align-center ul ul {
+  text-align: left;
+}
+#menu.align-right > ul > li {
+  float: right;
+}
+#menu > ul > li > a {
+  padding: 17px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#menu > ul > li:hover > a {
+  color: #ffffff;
+}
+#menu > ul > li.has-sub > a {
+  padding-right: 30px;
+}
+#menu > ul > li.has-sub > a:after {
+  position: absolute;
+  top: 22px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #dddddd;
+  content: '';
+}
+#menu > ul > li.has-sub > a:before {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #dddddd;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#menu > ul > li.has-sub:hover > a:before {
+  top: 23px;
+  height: 0;
+}
+#menu ul ul {
+  position: absolute;
+  left: -9999px;
+}
+#menu.align-right ul ul {
+  text-align: right;
+}
+#menu ul ul li {
+  height: 0;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#menu li:hover > ul {
+  left: auto;
+}
+#menu.align-right li:hover > ul {
+  left: auto;
+  right: 0;
+}
+#menu li:hover > ul > li {
+  height: 35px;
+}
+#menu ul ul ul {
+  margin-left: 100%;
+  top: 0;
+}
+#menu.align-right ul ul ul {
+  margin-left: 0;
+  margin-right: 100%;
+}
+#menu ul ul li a {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+  padding: 11px 15px;
+  width: 170px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: 400;
+  background: #333333;
+}
+#menu ul ul li:last-child > a,
+#menu ul ul li.last-item > a {
+  border-bottom: 0;
+}
+#menu ul ul li:hover > a,
+#menu ul ul li a:hover {
+  color: #ffffff;
+}
+#menu ul ul li.has-sub > a:after {
+  position: absolute;
+  top: 16px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #dddddd;
+  content: '';
+}
+#menu.align-right ul ul li.has-sub > a:after {
+  right: auto;
+  left: 11px;
+}
+#menu ul ul li.has-sub > a:before {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #dddddd;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#menu.align-right ul ul li.has-sub > a:before {
+  right: auto;
+  left: 14px;
+}
+#menu ul ul > li.has-sub:hover > a:before {
+  top: 17px;
+  height: 0;
+}
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #menu {
+    width: 100%;
+  }
+  #menu ul {
+    width: 100%;
+    display: none;
+  }
+  #menu.align-center > ul {
+    text-align: left;
+  }
+  #menu ul li {
+    width: 100%;
+    border-top: 1px solid rgba(120, 120, 120, 0.2);
+  }
+  #menu ul ul li,
+  #menu li:hover > ul > li {
+    height: auto;
+  }
+  #menu ul li a,
+  #menu ul ul li a {
+    width: 100%;
+    border-bottom: 0;
+  }
+  #menu > ul > li {
+    float: none;
+  }
+  #menu ul ul li a {
+    padding-left: 25px;
+  }
+  #menu ul ul ul li a {
+    padding-left: 35px;
+  }
+  #menu ul ul li a {
+    color: #dddddd;
+    background: none;
+  }
+  #menu ul ul li:hover > a,
+  #menu ul ul li.active > a {
+    color: #ffffff;
+  }
+  #menu ul ul,
+  #menu ul ul ul,
+  #menu.align-right ul ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  #menu > ul > li.has-sub > a:after,
+  #menu > ul > li.has-sub > a:before,
+  #menu ul ul > li.has-sub > a:after,
+  #menu ul ul > li.has-sub > a:before {
+    display: none;
+  }
+  #menu #menu-button {
+    display: block;
+    padding: 17px;
+    color: #dddddd;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  #menu #menu-button:after {
+    position: absolute;
+    top: 22px;
+    right: 17px;
+    display: block;
+    height: 4px;
+    width: 20px;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    content: '';
+  }
+  #menu #menu-button:before {
+    position: absolute;
+    top: 16px;
+    right: 17px;
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: #dddddd;
+    content: '';
+  }
+  #menu #menu-button.menu-opened:after {
+    top: 23px;
+    border: 0;
+    height: 2px;
+    width: 15px;
+    background: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  #menu #menu-button.menu-opened:before {
+    top: 23px;
+    background: #ffffff;
+    width: 15px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  #menu .submenu-button {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    display: block;
+    border-left: 1px solid rgba(120, 120, 120, 0.2);
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+  }
+  #menu .submenu-button.submenu-opened {
+    background: #262626;
+  }
+  #menu ul ul .submenu-button {
+    height: 34px;
+    width: 34px;
+  }
+  #menu .submenu-button:after {
+    position: absolute;
+    top: 22px;
+    right: 19px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #dddddd;
+    content: '';
+  }
+  #menu ul ul .submenu-button:after {
+    top: 15px;
+    right: 13px;
+  }
+  #menu .submenu-button.submenu-opened:after {
+    background: #ffffff;
+  }
+  #menu .submenu-button:before {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #dddddd;
+    content: '';
+  }
+  #menu ul ul .submenu-button:before {
+    top: 12px;
+    right: 16px;
+  }
+  #menu .submenu-button.submenu-opened:before {
+    display: none;
+  }
+}
+#container{
+	background-color:#FFF;
+}
+#texto{
+	margin-top:5%;
+	float:left;
+	width:40%;
+	height:60%;
+	border:solid;
+	margin-bottom:5%;
+	
+}
+#imagen{
+	margin-top:3.5%;
+	float:left;
+	width:50%;
+	height:50%;
+	margin-left:5%;
+	margin-bottom:5%;
+}
+#rodape{
+	background-color:#FF4500;
+	padding:25px;
+	text-align:left;
+	color:white;
+	clear:both;	
+	margin-top:3%;
+}
+#geral{
+	background-color:white;
+}
+#adotar{
+	float:left;
+	background-color:white;
+}
+
+.clear{
+	clear:both;
+}
+#quadrado{
+	float:left;
+	width:400px;
+	height:auto;
+	border:3pt solid #FFF;
+	margin-left:400px;
+	margin-top:50px;
+}
+#img{
+	float:left;
+	width:100%;
+	text-align:center;
+	margin-bottom:30px;
+	background-color:white;
+}
+.thumb{
+	float:left;
+	border:3pt solid #FFF;
+	margin-left:37px;
+	margin-top:20px;
+	cursor:pointer;
+	height:100px;
+	width:100px;
+}
+/*
+	Stylesheet for Tigra Calendar v5.0
+	Product is Public Domain (Free for any kind of applicaiton, customization and derivative works are allowed) 
+	URL: http://www.softcomplex.com/products/tigra_calendar/
+
+	- all image paths are relative to path of stylesheet
+	- the styles below can be moved into the document or in existing stylesheet
+
+*/
+
+/* input box in default state */ 
+.tcalInput {
+	background: url('img/cal.gif') 100% 50% no-repeat;
+	padding-right: 20px;
+	cursor: pointer;
+}
+
+/* additional properties for input boxe in activated state, above still applies unless in conflict */
+.tcalActive {
+	background-image: url('img/no_cal.gif');
+}
+/* container of calendar's pop-up */
+#tcal {
+	position: absolute;
+	visibility: hidden;
+	z-index: 100;
+	width: 170px;
+	background-color: white;
+	margin-top: 2px;
+	padding: 0 2px 2px 2px;
+	border: 1px solid silver;
+
+	-moz-box-shadow: 3px 3px 4px silver;
+	-webkit-box-shadow: 3px 3px 4px silver;
+	box-shadow: 3px 3px 4px silver;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='silver')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='silver');
+}
+
+/* table containing navigation and current month */
+#tcalControls {
+	border-collapse: collapse;
+	border: 0;
+	width: 100%;
+}
+#tcalControls td {
+	border-collapse: collapse;
+	border: 0;
+	padding: 0;
+	width: 16px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#tcalControls th {
+	border-collapse: collapse;
+	border: 0;
+	padding: 0;
+	line-height: 25px;
+	font-size: 10px;
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+}
+#tcalPrevYear { background-image: url('img/prev_year.gif'); }
+#tcalPrevMonth { background-image: url('img/prev_mon.gif'); }
+#tcalNextMonth { background-image: url('img/next_mon.gif'); }
+#tcalNextYear { background-image: url('img/next_year.gif'); }
+
+/* table containing week days header and calendar grid */
+#tcalGrid {
+	border-collapse: collapse;
+	border: 1px solid silver;
+	width: 100%;
+}
+#tcalGrid th {
+	border: 1px solid silver;
+	border-collapse: collapse;
+	padding: 3px 0;
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 10px;
+	background-color: gray;
+	color: white;
+}
+#tcalGrid td {
+	border: 0;
+	border-collapse: collapse;
+	padding: 2px 0;
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+	width: 14%;
+	font-size: 11px;
+	cursor: pointer;
+}		
+#tcalGrid td.tcalOtherMonth { color: silver; }
+#tcalGrid td.tcalWeekend { background-color: #ACD6F5; }
+#tcalGrid td.tcalToday { border: 1px solid red; }
+#tcalGrid td.tcalSelected { background-color: #FFB3BE; }	
+
+/*ADOTAR*/
+#lista_adota{
+	/*background:green;*/
+	width:100%;
+}
+#field1{
+	/*background:yellow;*/
+	width:200px;
+	height:150px;
+	float:left;
+	font-family:tahoma;
+	font-size:11px;
+	margin-left:15px;
+	margin-bottom:20px;
+}
+.imagemfield1{
+	float:left;
+	width:100px;
+	height:150px;
+	margin-right:5px;
+}
+.metade_field{
+	/*background:grey;*/
+	float:left;
+	width:90px;
+	margin-top:5px;
+	height:140px;
+	overflow:auto;
+}
